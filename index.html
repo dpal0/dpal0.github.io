@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diksha's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="nav-item folder" onclick="showPage('about')">📁 About</div>
+        <div class="nav-item folder blue" onclick="showPage('projects')">📁 Projects</div>
+        <div class="nav-item folder purple" onclick="showPage('experience')">📁 Experience</div>
+        <div class="nav-item folder green" onclick="showPage('writing')">📁 Writing</div>
+        
+        <h3>Quick Links</h3>
+        <div class="nav-item" onclick="showPage('resume')">📄 Resume</div>
+        <div class="nav-item" onclick="showPage('contact')">✉️ Contact</div>
+        <div class="nav-item" onclick="showPage('skills')">🛠️ Skills</div>
+    </div>
+
+    <div class="main-content">
+        <!-- About Page -->
+        <div id="about" class="page">
+            <h1 class="page-title">Hi there!</h1>
+            <div class="content">
+                <p>I'm Diksha, a Computer Engineering student at the University of Maryland, College Park, 
+                   graduating in May 2026. I'm passionate about machine learning, building reliable AI systems, and 
+                   software reverse engineering (leagly). Currently, I'm conducting research on knowledge 
+                   distillation algorithms at FORMAL Lab and this past summer I worked on neural spike sorting optimization 
+                   at the Institute for Systems Research.</p>
+
+                   <p>My interests span across AI ethics, cybersecurity education, and practical applications of deep learning. </p>
+                   <p>Always excited to collaborate on innovative tech solutions that make a real-world impact!
+                     Let's connect and build something amazing together!</p>
+                
+                
+            </div>
+        </div>
+
+        <!-- Skills Page -->
+        <div id="skills" class="page hidden">
+            <h1 class="page-title">Skills</h1>
+            <div class="content">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-badges">
+                            <span class="badge java">Java</span>
+                            <span class="badge python">Python</span>
+                            <span class="badge c">C</span>
+                            <span class="badge cpp">C++</span>
+                            <span class="badge ocaml">OCaml</span>
+                            <span class="badge cuda">CUDA</span>
+                            <span class="badge rust">Rust</span>
+                            <span class="badge r">R</span>
+                            <span class="badge bash">Bash</span>
+                            <span class="badge sql">SQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <div class="skill-badges">
+                            <span class="badge html">HTML</span>
+                            <span class="badge css">CSS</span>
+                            <span class="badge js">JavaScript</span>
+                            <span class="badge react">React</span>
+                            <span class="badge node">Node.js</span>
+                            <span class="badge express">Express.js</span>
+                            <span class="badge mongo">MongoDB</span>
+                            <span class="badge d3">D3.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Page -->
+        <div id="projects" class="page hidden">
+            <h1 class="page-title">Projects</h1>
+            <div class="content">
+                <p>Coming soon! This section will showcase my various projects in cybersecurity, AI, and software development.</p>
+            </div>
+        </div>
+
+        <!-- Experience Page -->
+        <div id="experience" class="page hidden">
+            <h1 class="page-title">Experience</h1>
+            <div class="content">
+                <h2>Grace Hopper Celebration Scholar</h2>
+                <p>Selected as a Grace Hopper Celebration scholar, connecting with passionate women in tech and learning about diverse career paths in technology.</p>
+                
+                <h2>Organizations</h2>
+                <p>Active member of multiple organizations promoting diversity and inclusion in computing:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Computing Catalysts </li>
+                    <li>Association for Women in Computing</li>
+                    <li>Rewriting the Code</li>
+                    <li>Society of Women in Engienering</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Writing Page -->
+        <div id="writing" class="page hidden">
+            <h1 class="page-title">Writing</h1>
+            <div class="content">
+            
+                
+                <ol style="margin-left: 20px; margin-top: 20px;">
+                <li> I write sometimes lol, Audits and Policy briefs</li>    
+                </ol>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page hidden">
+            <h1 class="page-title">Contact</h1>
+            <div class="content">
+                <p>Feel free to reach out to me!</p>
+                <p>📧 Email: [your-email@example.com]</p>
+                <p>💼 LinkedIn: [your-linkedin]</p>
+                <p>🐙 GitHub: [your-github]</p>
+            </div>
+        </div>
+
+        <!-- Resume Page -->
+        <div id="resume" class="page hidden">
+            <h1 class="page-title">Resume</h1>
+            <div class="content">
+                <p>Download my resume or view it online.</p>
+                <p><a href="#" style="color: #c9a96e; text-decoration: none;">📥 Download PDF</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.add('hidden'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.remove('hidden');
+            
+            // Update active nav item
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Show about page by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('about');
+        });
+    </script>
+</body>
+</html>
