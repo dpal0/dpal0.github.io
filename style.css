@@ -136,10 +136,8 @@
         .badge.css { background-color: #1572b6; }
         .badge.js { background-color: #f7df1e; color: #000; }
         .badge.react { background-color: #61dafb; color: #000; }
-        .badge.node { background-color: #339933; }
-        .badge.express { background-color: #000000; }
-        .badge.mongo { background-color: #47a248; }
-        .badge.d3 { background-color: #f9a03c; }
+        .badge.verilog { background-color: #b83998; }
+        .badge.assembly { background-color: #525252; }
 
         .hidden {
             display: none;
